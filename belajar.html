@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MATERI PEMBELAJARAN - AKHIN.GO</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Gaya tambahan khusus halaman belajar */
+    body {
+      background: var(--bg-section);
+      color: var(--text-dark);
+    }
+
+    .learning-header {
+      background: var(--bg-main);
+      color: var(--text-main);
+      padding: 28px 0;
+    }
+
+    .learning-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .learning-top h1 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      margin-bottom: 6px;
+    }
+
+    .learning-top p {
+      color: var(--text-secondary);
+    }
+
+    .learning-layout {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 20px;
+      padding: 24px 0 40px;
+    }
+
+    .sidebar,
+    .content-area {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .sidebar {
+      padding: 20px;
+      position: sticky;
+      top: 92px;
+      height: fit-content;
+    }
+
+    .sidebar h2,
+    .content-area h2 {
+      margin-bottom: 14px;
+      color: var(--text-dark);
+    }
+
+    .chapter-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .chapter-list a {
+      display: block;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: var(--bg-section);
+      color: var(--text-dark);
+      transition: 0.25s ease;
+    }
+
+    .chapter-list a:hover {
+      background: rgba(15, 163, 177, 0.14);
+    }
+
+    .content-area {
+      padding: 24px;
+    }
+
+    .content-block {
+      background: var(--bg-section);
+      border-radius: 18px;
+      padding: 20px;
+      margin-bottom: 18px;
+      border: 1px solid rgba(18, 32, 51, 0.06);
+    }
+
+    .content-block h3 {
+      margin-bottom: 10px;
+    }
+
+    .placeholder-box {
+      margin-top: 12px;
+      padding: 16px;
+      border-radius: 14px;
+      background: rgba(15, 163, 177, 0.10);
+      border: 1px dashed rgba(15, 163, 177, 0.28);
+    }
+
+    .resource-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .resource-list a {
+      color: var(--secondary);
+      font-weight: 600;
+      word-break: break-word;
+    }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .mini-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 16px;
+      border: 1px solid var(--border);
+    }
+
+    @media (max-width: 900px) {
+      .learning-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .mini-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="learning-header">
+    <div class="container learning-top">
+      <div>
+        <h1>MATERI PEMBELAJARAN</h1>
+        <p>Struktur modul sederhana untuk pengembangan pembelajaran berbasis web.</p>
+      </div>
+      <a href="index.html" class="btn btn--primary">Kembali ke Landing Page</a>
+    </div>
+  </header>
+
+  <main class="container learning-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Daftar Bab</h2>
+      <ul class="chapter-list">
+        <li><a href="#bab1">Bab 1: Adab di rumah</a></li>
+        <li><a href="#bab2">Bab 2: Adab di Sekolah</a></li>
+        <li><a href="#bab3">Bab 3: Adab Lingkungan</a></li>
+      </ul>
+
+      <div class="placeholder-box">
+        <strong>Catatan:</strong>
+        <p>Sidebar ini bisa dikembangkan menjadi menu klik, daftar progres, atau navigasi bab lainnya.</p>
+      </div>
+    </aside>
+
+    <!-- Konten Utama -->
+    <section class="content-area">
+      <h2>Deskripsi Pembelajaran</h2>
+      <p>
+        Halaman ini adalah LMS mini sederhana untuk menampung materi, video, gambar, kuis, dan embed lain yang akan dikembangkan pada pertemuan berikutnya.
+      </p>
+
+      <div class="content-block" id="bab1">
+        <h3>Bab 1: Adab di rumah</h3>
+        <p><strong>Ringkasan:</strong> Membangun pondasi karakter akhlak mulia sejak dini melalui pembiasaan bakti kepada orang tua dan harmoni dalam keluarga.</p>
+
+        <div class="mini-grid">
+          <div class="mini-card">
+            <strong>Subbab 1.1</strong>
+            <p>Modul Birrul Walidain & Adab terhadap saudara.</p>
+            <p>1.1.1 Berbicara dengan nada lembut dan tidak membentak.</p>
+            <p>1.1.2 Membantu pekerjaan di rumah.</p>
+            <p>1.1.3 Menyayangi adik dan menghormati kakak.</p>
+          </div>
+
+          <div class="mini-card">
+            <strong>Placeholder materi</strong>
+            <p>Bagian ini bisa diisi dengan teks, gambar, video, atau aktivitas interaktif.</p>
+          </div>
+        </div>
+
+        <div class="placeholder-box">
+          <strong>Placeholder link PPT:</strong>
+          <div class="resource-list">
+            <a href="https://www.canva.com/design/DAHIfZvJW3k/zgTzwATI7xJdB_WDvmghEA/view?embed" target="_blank" rel="noopener">Power Point “Adab terhadap orang tua”</a>
+            <a href="https://www.canva.com/design/DAHI2jqQf-8/JZf2a5Mp6IxlVek58EhQlg/view?embed" target="_blank" rel="noopener">Yellow Colorful Bright The Importance of Education Presentation</a>
+            <a href="https://wayground.com/admin/quiz/69f4094d5b383768820f966e" target="_blank" rel="noopener">Link kuis Bab 1</a>
+          </div>
+        </div>
+
+        <div class="placeholder-box">
+          <strong>Contoh embed:</strong>
+          <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.2em; overflow: hidden; border-radius: 8px; will-change: transform;">
+            <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;" src="https://www.canva.com/design/DAHIfZvJW3k/zgTzwATI7xJdB_WDvmghEA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-block" id="bab2">
+        <h3>Bab 2: Adab di Sekolah</h3>
+        <p><strong>Ringkasan:</strong> Fokus pada pengembangan kecerdasan sosial, empati terhadap teman sebaya, serta tata krama dan rasa hormat kepada pendidik.</p>
+
+        <div class="mini-grid">
+          <div class="mini-card">
+            <strong>Subbab 2.1</strong>
+            <p>Modul Menghormati Guru & Menyayangi Teman.</p>
+            <p>2.1.1 Mengucapkan salam saat bertemu dan memperhatikan penjelasan di kelas.</p>
+            <p>2.2.2 Tidak mengejek teman dan saling berbagi makanan atau alat tulis.</p>
+          </div>
+
+          <div class="mini-card">
+            <strong>Subbab 2.2</strong>
+            <p>Video Skenario: “Berbagi itu Indah” saat ada teman yang lupa membawa pensil.</p>
+            <div class="resource-list">
+              <a href="https://youtu.be/QevJlyk5GfE?si=xiovUN04vQ750OVP" target="_blank" rel="noopener">Video 1</a>
+              <a href="https://youtu.be/re7uZisvFwo?si=xa3No4oAlLNjt3pV" target="_blank" rel="noopener">Video 2</a>
+              <a href="https://youtu.be/k8KHpfxOUfM?feature=shared" target="_blank" rel="noopener">Video 3</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="placeholder-box">
+          <strong>Placeholder game / kuis:</strong>
+          <div class="resource-list">
+            <a href="https://gemini.google.com/share/3e02628a8c04" target="_blank" rel="noopener">Link game 1</a>
+            <a href="https://gemini.google.com/share/085f39db065a" target="_blank" rel="noopener">Link game 2</a>
+            <a href="https://gameinteraktif26.my.canva.site" target="_blank" rel="noopener">Link kuis interaktif</a>
+          </div>
+        </div>
+
+        <div class="placeholder-box">
+          <strong>Contoh embed PPT:</strong>
+          <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.2em; overflow: hidden; border-radius: 8px; will-change: transform;">
+            <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;" src="https://www.canva.com/design/DAHJ7VLgLrg/2nEqat3VIXzd7v6rvGcKKg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-block" id="bab3">
+        <h3>Bab 3: Adab Lingkungan</h3>
+        <p><strong>Ringkasan:</strong> Menanamkan rasa tanggung jawab, kepedulian terhadap kebersihan, dan kasih sayang terhadap sesama makhluk ciptaan Allah.</p>
+
+        <div class="mini-grid">
+          <div class="mini-card">
+            <strong>Subbab 3.1</strong>
+            <p>Modul Menjaga Kebersihan & Menyayangi Makhluk Hidup.</p>
+            <p>3.1.1 Membuang sampah pada tempatnya dan memungut sampah yang berserakan.</p>
+            <p>3.1.2 Tidak menyakiti hewan dan menyiram tanaman secara teratur.</p>
+          </div>
+
+          <div class="mini-card">
+            <strong>Subbab 3.2</strong>
+            <p>Video inspiratif tentang menyelamatkan kucing jalanan atau menanam bunga di taman sekolah.</p>
+            <div class="resource-list">
+              <a href="https://youtube.com/shorts/7Yx3zQOAn_c?feature=share" target="_blank" rel="noopener">Video 1</a>
+              <a href="https://youtu.be/8BEzuDzyT3o" target="_blank" rel="noopener">Video 2</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="placeholder-box">
+          <strong>Evaluasi akhir:</strong>
+          <div class="resource-list">
+            <a href="https://canva.link/nqpv9yc4ya5t70m" target="_blank" rel="noopener">Checklist “Aksi Adabku Hari Ini”</a>
+            <a href="https://gemini.google.com/share/696cebc6298e" target="_blank" rel="noopener">Link quiz evaluasi akhir</a>
+          </div>
+        </div>
+
+        <div class="placeholder-box">
+          <strong>Contoh area konten yang bisa dikembangkan:</strong>
+          <p>Di bagian ini nanti bisa ditambahkan gambar, video, latihan interaktif, atau iframe game edukatif lainnya.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
